@@ -12,7 +12,6 @@ export default function(options: DependencyOptions): Rule {
   return chain([
     addNpmDependenciesRule([
       { type: NodeDependencyType.Dev, version, name },
-      { type: NodeDependencyType.Dev, version: '^1.15.0', name: 'tslint-config-prettier' }
     ]),
     runNpmInstallRule()
   ]);
