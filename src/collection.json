@@ -1,0 +1,10 @@
+{
+  "$schema": "../node_modules/@angular-devkit/schematics/collection-schema.json",
+  "schematics": {
+    "prettify-and-lint": {
+      "description": "Add TSLint and Prettier. Creates/replaces TSLint and Prettier settings with recommended configuration",
+      "factory": "./prettify-and-lint",
+      "schema": "./prettify-and-lint/schema.json"
+    }
+  }
+}
