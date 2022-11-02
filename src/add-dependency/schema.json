@@ -1,0 +1,27 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "$id": "AddDependency",
+  "title": "Add a dependency in package.json",
+  "type": "object",
+  "properties": {
+    "name": {
+      "description": "Specifies the name of the package to be imported",
+      "type": "string",
+      "$default": {
+        "$source": "argv",
+        "index": 0
+      }
+    }, "version": {
+      "description": "Specifies the version of the package to be imported",
+      "type": "string",
+      "$default": {
+        "$source": "argv",
+        "index": 0
+      }
+    }
+  },
+  "required": [
+    "name", "version"
+  ],
+  "additionalProperties": false
+}
