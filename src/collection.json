@@ -10,6 +10,11 @@
       "description": "Add a dependency to the package.json",
       "factory": "./add-dependency",
       "schema": "./add-dependency/schema.json"
+    },
+    "add-service": {
+      "description": "Add a service to the project",
+      "factory": "./add-service",
+      "schema": "./add-service/schema.json"
     }
   }
 }

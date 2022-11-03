@@ -1,6 +1,6 @@
 import * as strings from '@angular-devkit/core/src/utils/strings';
 import { DirEntry, FileEntry, Tree } from '@angular-devkit/schematics';
-import * as typescript from 'typescript';
+import * as typescript from '@schematics/angular/third_party/github.com/Microsoft/TypeScript/lib/typescript';
 
 import { openSourceFile } from '../ast/ast-helpers';
 import { SourceFileModification } from '../ast/source-file-modification.interface';
@@ -69,7 +69,7 @@ export function findFilenameInTree(
   return directory.parent ? findFilenameInTree(directory.parent, fileMatchesCriteria) : null;
 }
 
-export function findModuleFilenameInTree(tree: Tree, options: SchemaOptions): string | null {
+export function findModuleFilenameInTree(tree: Tree, options: SchemaOptions): string | null{
   return findFilenameInTree(
     tree.getDir(options.path),
     file => file.endsWith('.module.ts') && !file.includes('-routing')

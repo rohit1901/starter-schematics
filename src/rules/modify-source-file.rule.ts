@@ -1,5 +1,5 @@
 import { Rule, Tree } from '@angular-devkit/schematics';
-import * as typescript from 'typescript';
+import * as typescript from '@schematics/angular/third_party/github.com/Microsoft/TypeScript/lib/typescript';
 
 import { SourceFileModification } from '../ast/source-file-modification.interface';
 
