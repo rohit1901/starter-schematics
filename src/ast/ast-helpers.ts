@@ -1,6 +1,6 @@
 import * as fs from 'fs';
-import * as typescript from '@schematics/angular/third_party/github.com/Microsoft/TypeScript/lib/typescript';
-import { SourceFile, Statement } from "@schematics/angular/third_party/github.com/Microsoft/TypeScript/lib/typescript";
+import * as typescript from 'typescript';
+import { SourceFile, Statement } from "typescript";
 
 export function openSourceFileFromFileSystem(filename: string) {
   return openSourceFile(filename, () => fs.readFileSync(filename, 'utf-8'));

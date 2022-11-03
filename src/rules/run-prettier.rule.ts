@@ -14,7 +14,7 @@ export function runPrettier(): Rule {
                 file,
                 prettier.format(readFile.toString(), {
                     ...prettierConfig,
-                    parser: '@schematics/angular/third_party/github.com/Microsoft/TypeScript/lib/typescript'
+                    parser: 'typescript'
                 })
             );
         });

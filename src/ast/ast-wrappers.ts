@@ -7,7 +7,7 @@ import { Change, InsertChange } from '@schematics/angular/utility/change';
 
 import { getLastImportDeclaration } from './ast-helpers';
 import { SourceFileModification } from './source-file-modification.interface';
-import { SourceFile } from "@schematics/angular/third_party/github.com/Microsoft/TypeScript/lib/typescript";
+import { SourceFile } from "typescript";
 
 function mapInsertChangesToModifications(changes: Change[]) {
   return changes.map(mapInsertChangeToModification);

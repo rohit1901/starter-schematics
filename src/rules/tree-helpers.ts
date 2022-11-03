@@ -1,6 +1,6 @@
 import * as strings from '@angular-devkit/core/src/utils/strings';
 import { DirEntry, FileEntry, Tree } from '@angular-devkit/schematics';
-import * as typescript from '@schematics/angular/third_party/github.com/Microsoft/TypeScript/lib/typescript';
+import * as typescript from 'typescript';
 
 import { openSourceFile } from '../ast/ast-helpers';
 import { SourceFileModification } from '../ast/source-file-modification.interface';
