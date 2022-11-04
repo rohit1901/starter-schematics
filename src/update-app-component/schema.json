@@ -1,0 +1,7 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "$id": "UpdateAppComponent",
+  "title": "Update App Component HTML with custom content",
+  "type": "object",
+  "properties": {}
+}
