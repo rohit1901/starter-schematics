@@ -15,6 +15,11 @@
       "description": "Add a service to the project",
       "factory": "./add-service",
       "schema": "./add-service/schema.json"
+    },
+    "update-app-component": {
+      "description": "Update App Component HTML with custom content",
+      "factory": "./update-app-component",
+      "schema": "./update-app-component/schema.json"
     }
   }
 }
