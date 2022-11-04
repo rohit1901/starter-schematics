@@ -69,7 +69,7 @@ export function findFilenameInTree(
   return directory.parent ? findFilenameInTree(directory.parent, fileMatchesCriteria) : null;
 }
 
-export function findModuleFilenameInTree(tree: Tree, options: SchemaOptions): string | null {
+export function findModuleFilenameInTree(tree: Tree, options: SchemaOptions): string | null{
   return findFilenameInTree(
     tree.getDir(options.path),
     file => file.endsWith('.module.ts') && !file.includes('-routing')
