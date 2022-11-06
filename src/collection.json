@@ -26,6 +26,31 @@
       "factory": "./add-assets",
       "schema": "./add-assets/schema.json"
     },
+    "ngrx": {
+      "description": "ngRX",
+      "factory": "./ngrx",
+      "schema": "./ngrx/schema.json"
+    },
+    "ngrx-actions": {
+      "description": "ngRX",
+      "factory": "./ngrx-actions",
+      "schema": "./ngrx-actions/schema.json"
+    },
+    "ngrx-effects": {
+      "description": "ngRX",
+      "factory": "./ngrx-effects",
+      "schema": "./ngrx-effects/schema.json"
+    },
+    "ngrx-reducer": {
+      "description": "ngRX",
+      "factory": "./ngrx-reducer",
+      "schema": "./ngrx-reducer/schema.json"
+    },
+    "ngrx-store": {
+      "description": "ngRX",
+      "factory": "./ngrx-store",
+      "schema": "./ngrx-store/schema.json"
+    },
     "bafa-initializer": {
       "description": "Initializer Schematic which updated the app.component.html, add bafa-ui-lib as dependency, add tsLint and Prettier, adds .scss files and adds auth service",
       "factory": "./bafa-initializer",
