@@ -5,22 +5,22 @@
   "type": "object",
   "properties": {
     "path": {
-      "description": "The path to create the feature.",
+      "description": "The path to create the service.",
       "type": "string",
       "format": "path",
       "visible": false
     },
-    "name": {
-      "description": "The name of the feature.",
+    "serviceName": {
+      "description": "The name of the service.",
       "type": "string",
       "$default": {
         "$source": "argv",
         "index": 0
       },
-      "x-prompt": "What name would you like to use for the feature?"
+      "x-prompt": "What name would you like to use for the service?"
     }
   },
   "required": [
-    "name", "path"
+    "serviceName"
   ]
 }

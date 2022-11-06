@@ -20,6 +20,16 @@
       "description": "Update App Component HTML with custom content",
       "factory": "./update-app-component",
       "schema": "./update-app-component/schema.json"
+    },
+    "add-assets": {
+      "description": "Add project .scss files in the assets folder",
+      "factory": "./add-assets",
+      "schema": "./add-assets/schema.json"
+    },
+    "bafa-initializer": {
+      "description": "Initializer Schematic which updated the app.component.html, add bafa-ui-lib as dependency, add tsLint and Prettier, adds .scss files and adds auth service",
+      "factory": "./bafa-initializer",
+      "schema": "./bafa-initializer/schema.json"
     }
   }
 }

@@ -11,6 +11,11 @@ export function validateRegularSchema(options: SchemaOptions) {
     throw new SchematicsException('Option (path) is required.');
   }
 }
+export function validateServiceSchema(options: SchemaOptions) {
+  if (!options.serviceName) {
+    throw new SchematicsException('Option (service-name) is required.');
+  }
+}
 
 export function getContainingFolderPath(path: string, folder: string) {
   return path.endsWith(folder) ? path : `${path}${folder}`;

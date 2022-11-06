@@ -7,8 +7,9 @@ import { DependencyOptions } from "../types/dependency-options/dependency-option
 import { isDependencyOptions } from "../types/dependency-options/dependency-functions";
 
 export default function(options: DependencyOptions): Rule {
+  if(!options.dependencyVersion) options.dependencyVersion = 'latest';
   if(!isDependencyOptions(options)) return noop();
-  const {name, version} = options;
+  const {dependencyName: name, dependencyVersion: version} = options;
   return chain([
     addNpmDependenciesRule([
       { type: NodeDependencyType.Dev, version, name },

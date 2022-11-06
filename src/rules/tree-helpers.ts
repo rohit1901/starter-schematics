@@ -11,6 +11,11 @@ export function deleteFile(tree: Tree, filename: string) {
     tree.delete(filename);
   }
 }
+export function deleteFolder(tree: Tree, folderPath: string) {
+  if (tree.exists(folderPath)) {
+    tree.delete(folderPath);
+  }
+}
 
 export function getSubDirEntry(directory: DirEntry, subDirectoryNames: string[]): DirEntry | null {
   if (subDirectoryNames.length > 0) {

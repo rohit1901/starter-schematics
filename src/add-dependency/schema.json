@@ -4,14 +4,15 @@
   "title": "Add a dependency in package.json",
   "type": "object",
   "properties": {
-    "name": {
+    "dependencyName": {
       "description": "Specifies the name of the package to be imported",
       "type": "string",
       "$default": {
         "$source": "argv",
         "index": 0
       }
-    }, "version": {
+    },
+    "dependencyVersion": {
       "description": "Specifies the version of the package to be imported",
       "type": "string",
       "$default": {
@@ -21,7 +22,7 @@
     }
   },
   "required": [
-    "name", "version"
+    "dependencyName"
   ],
   "additionalProperties": false
 }
