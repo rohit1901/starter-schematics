@@ -1,4 +1,4 @@
-import { chain, schematic, Rule } from "@angular-devkit/schematics";
+import { chain, schematic, Rule, externalSchematic } from "@angular-devkit/schematics";
 
 import { SchemaOptions } from "../types/schema-options/schema-options.interface";
 
@@ -8,6 +8,7 @@ export default function(options: SchemaOptions): Rule {
     dependencyName: "lodash"
   };
   return chain([
+    externalSchematic('@schematics/angular', 'ng-new', options),
     schematic("update-app-component", options),
     schematic("add-dependency", dependencyOptions),
     schematic("prettify-and-lint", options),

@@ -4,7 +4,7 @@
   "description": "Schematics for starter-kit",
   "scripts": {
     "build-local": "tsc -p tsconfig.json",
-    "build": "ng-packagr -p ng-package.json && npm run build:schematics && npm run copy:schematics",
+    "build": "ng-packagr -p ng-package.json && npm version patch && npm run build:schematics && npm run copy:schematics",
     "build:schematics": "tsc -p tsconfig.json --outDir ./dist",
     "copy:schematics": "cpr src dist --overwrite --deleteFirst",
     "test": "npm run build && jasmine src/**/*_spec.js"
