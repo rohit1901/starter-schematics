@@ -1,5 +1,5 @@
 import { SchemaOptions } from "../schema-options/schema-options.interface";
 
 export interface DependencyOptions extends SchemaOptions{
-  version: string;
+  dependencyVersion: string;
 }

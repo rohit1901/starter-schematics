@@ -8,24 +8,25 @@ import { findModuleFilenameInTree } from '../rules/tree-helpers';
 import { Folders } from '../types/folders/folders.enum';
 import {
   getContainingFolderPath,
-  validateRegularSchema
-} from '../types/schema-options/schema-options.functions';
+  validateServiceSchema
+} from "../types/schema-options/schema-options.functions";
 import { SchemaOptions } from '../types/schema-options/schema-options.interface';
 
 export default function(options: SchemaOptions): Rule {
-  validateRegularSchema(options);
-
+  validateServiceSchema(options);
+  if(!options.path) options.path = Folders.Parent + Folders.Application;
   options.path = getContainingFolderPath(options.path, Folders.Services);
+  options.name = options.serviceName;
   return chain([
-    processTemplates(options, options.path),
+    processTemplates(options),
     modifySourceFile(
       tree => findModuleFilenameInTree(tree, options) ?? '',
       (sourceFile, moduleFilename) =>
         addProviderToNgModule(
           sourceFile,
           moduleFilename,
-          strings.classify(`${options.name}Service`),
-          `.${Folders.Services}/${strings.dasherize(options.name)}.service`
+          strings.classify(`${options.serviceName}Service`),
+          `.${Folders.Services}/${strings.dasherize(options.serviceName)}.service`
         )
     )
   ]);

@@ -1,0 +1,6 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "$id": "BafaInitializer",
+  "title": "Bafa Initializer Schema",
+  "type": "object"
+}

@@ -4,5 +4,9 @@ export enum Folders {
   Modules = '/modules',
   Services = '/services',
   Store = '/store',
-  Types = '/types'
+  Types = '/types',
+  Assets = '/assets',
+  Application = '/app',
+  Parent = '/src',
+  Files = '/files',
 }
