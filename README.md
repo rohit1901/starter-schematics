@@ -1,6 +1,7 @@
 # Setting up Schematics and creating new schematics
 
 This repository is a Schematic implementation that serves as a starting point to create new angular applications.
+The schematic creates an empty angular project, copies assets, updates app.component.html, app.module.ts and adds dependencies
 
 ### Testing
 
@@ -39,9 +40,10 @@ npm publish
 
 ### Running in project
 - The production build needs to be hosted to verdaccio or a npm hosting server.
-- Update the project ``.npmrc`` file and include the npm registry path where the schematics have been published
-- Navigate to project folder and execute the following command
+- Navigate to a folder where the new project needs to be generated
+- create a ``.npmrc`` file in the folder and include the npm registry path where the schematics have been published or globally set npm registry
+- Execute the following command
 ```bash
-schematics @bafa/starter-schematics:<schematic-name> --dryRun=false
+schematics @bafa/starter-schematics:bafa-initializer --dryRun=false
 
 ```
