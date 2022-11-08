@@ -7,31 +7,40 @@
     "build": "ng-packagr -p ng-package.json && npm run build:schematics && npm run copy:schematics",
     "build:schematics": "tsc -p tsconfig.json --outDir ./dist",
     "copy:schematics": "cpr src dist --overwrite --deleteFirst",
-    "test": "npm run build && jasmine src/**/*_spec.js"
+    "test": "npm run build && jasmine src/**/*_spec.js",
+    "release-patch": "npm version patch && npm run build && npm run publish"
   },
   "keywords": [
     "schematics"
   ],
   "author": "Rohit Khanduri",
   "license": "MIT",
-  "schematics": "./src/collection.json",
-  "publishConfig": {
-    "registry": "http://localhost:4873"
+  "schematics": "./dist/collection.json",
+  "ngPackage": {
+    "dest": "dist",
+    "lib": {
+      "entryFile": "src/public_api.ts"
+    }
   },
-  "devDependencies": {
+  "publishConfig": {
+    "registry": "http://localhost:4873"  },
+  "peerDependencies": {
     "@angular-devkit/core": "^14.2.7",
     "@angular-devkit/schematics": "^14.2.7",
     "@angular/compiler": "^14.2.8",
     "@angular/compiler-cli": "^14.2.8",
     "@angular/core": "^14.2.8",
     "@schematics/angular": "^14.2.7",
+    "@types/jasmine": "^4.3.0",
+    "@types/node": "^18.11.9",
+    "@types/prettier": "^2.7.1",
     "cpr": "^3.0.1",
     "jasmine": "^4.5.0",
-    "@types/node": "^14.15.0",
-    "@types/jasmine": "~4.0.0",
-    "@types/prettier": "^2.7.1",
-    "@angular/common": "^14.2.8",
-    "dasherize": "^2.0.0",
-    "ng-packagr": "^14.2.2"
-  }
+    "ng-packagr": "^14.2.2",
+    "prettier": "^2.7.1",
+    "tslint": "^6.1.3",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^4.8.4"
+  },
+  "files": ["dist/"]
 }
